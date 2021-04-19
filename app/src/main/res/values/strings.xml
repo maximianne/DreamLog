@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Homework4</string>
+        <string-array name="emotion_array">
+            <item>fear</item>
+            <item>panic</item>
+            <item>loss of self</item>
+            <item>grief</item>
+            <item>freedom</item>
+            <item>joy</item>
+            <item>love</item>
+            <item>vulnerability</item>
+            <item>confused</item>
+            <item>sad</item>
+        </string-array>
+</resources>
