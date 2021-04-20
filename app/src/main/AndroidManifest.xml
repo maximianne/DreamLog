@@ -21,6 +21,8 @@
         </activity>
         <activity android:name=".DisplayDream">
         </activity>
+        <activity android:name=".UpdateDream">
+        </activity>
     </application>
 
 </manifest>

@@ -14,7 +14,7 @@ class DreamRepository(private val dreamDAO: DreamDAO) {
      fun getDream(id: Int):Dream{
         return dreamDAO.getDream(id)
     }
-    suspend fun update(dream:Dream){
-        dreamDAO.update(dream.id.hashCode(),dream.title,dream.content,dream.reflection, dream.emotion)
+    suspend fun update(id:Int, title:String, content:String, reflection:String, emotion:String){
+        dreamDAO.update(id,title,content,reflection, emotion)
     }
 }

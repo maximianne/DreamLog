@@ -15,12 +15,15 @@ class DreamViewModel (private val repository: DreamRepository):ViewModel(){
         repository.delete(id)
     }
 
-//    fun getDream(id:Int) = viewModelScope.launch {
-//        repository.getDream(id)
-//    }
-//    fun getDream(id: Int?) = DreamDAO.getDream(id)
+    /**
+     *     @Query("UPDATE dream_table SET title=:title, content=:content, reflection=:reflection, emotion=:emotion WHERE id=:id")
+    suspend fun update(id:Int, title:String, content:String, reflection:String, emotion:String)
+     */
      fun getDream(id: Int):Dream{
         return repository.getDream(id)
+    }
+    fun UpdateDream(id:Int, title:String, content:String, reflection:String, emotion:String) = viewModelScope.launch {
+        repository.update(id, title, content, reflection, emotion)
     }
 }
 
